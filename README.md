@@ -7,7 +7,7 @@ Send a POST request with a list of sentences to be analyzed by spacy.
 - Clone the repository
 
 ```bash
-git clone
+git clone https://github.com/lgarma/entities_api.git 
 ```
 
 - Install Poetry
