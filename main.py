@@ -11,11 +11,14 @@ nlp = spacy.load("es_core_news_sm")
 
 @app.post("/entities/")
 def get_entities(sentences: dict[str, list[str]]) -> dict[str, Any]:
-    """Return the named entities in a list of sentences.
+    """Return the named entities given a list of sentences.
 
     Parameters:
         sentences (Sentences):
         List of sentences to be processed by spacy.
+
+    Returns:
+        dict[str, Any]: Dictionary with the sentences and their entities.
     """
     response = []
     for sentence in sentences["oraciones"]:
