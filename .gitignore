@@ -5,3 +5,6 @@
 #Virtual Environment
 .venv
 poetry.lock
+
+#pycache
+__pycache__/
