@@ -15,8 +15,12 @@ class SentencesRequest(BaseModel):
     Attributes:
         oraciones (list[str]): List of sentences to be processed by spacy.
     """
-    oraciones: list[str] = Field(..., example=["Apple está buscando comprar una startup del Reino Unido por mil millones de dólares.",
-                                                  "San Francisco considera prohibir los robots de entrega en la acera."])
+    oraciones: list[str] = Field(..., example=[
+        "Apple está buscando comprar una startup del Reino Unido por mil millones "
+        "de dólares.",
+        "San Francisco considera prohibir los robots de entrega en la acera."]
+                                 )
+
 
 @app.post("/entities/")
 def get_entities(sentences: SentencesRequest) -> dict[str, Any]:
